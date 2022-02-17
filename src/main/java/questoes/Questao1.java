@@ -6,6 +6,10 @@ public class Questao1 {
 
     /**
      * Method to design a kind of ladder of asterisks based on a chosen number
+     *
+     * @param input A string input from user
+     *
+     * @return A string with a kind of ladder made of asterisks
      */
     public static String fillAsterisks(String input) {
 

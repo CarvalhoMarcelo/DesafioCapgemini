@@ -1,5 +1,6 @@
 package util;
 
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Util {
@@ -12,7 +13,6 @@ public class Util {
      *
      * @return true if the String parameter matches to the defined regex of numbers otherwise false
      */
-
     public static boolean validOption(String option) {
 
         final String regex = "[0-9]+";
@@ -75,6 +75,29 @@ public class Util {
     private static boolean getPattern(String regex, String input){
         Pattern pattern = Pattern.compile(regex);
         return pattern.matcher(input).matches();
+    }
+
+    /**
+     * Method that will permute a string as much as request by user and according to the string length.
+     *
+     * @param elem Array with the word split
+     * @param act Aux string to concat the elem and avoid duplicates
+     * @param permuteNumber Number of permutes that will be done
+     * @param arrayLength Size of the array of words from the array that will be permuted
+     *
+     * @return String list with the possible permutes of the list elements
+     */
+    public static List<String> StrPermute(String[] elem, String act, int permuteNumber, int arrayLength, List<String> result) {
+        if (permuteNumber == 0) {
+            result.add(act.replace(",","").replace(" ",""));
+        } else {
+            for (int i = 0; i < arrayLength; i++) {
+                if (!act.contains(elem[i])) { // Control to avoid repetition
+                    StrPermute(elem, act + elem[i] + ", ", permuteNumber - 1, arrayLength, result);
+                }
+            }
+        }
+        return result;
     }
 
 }

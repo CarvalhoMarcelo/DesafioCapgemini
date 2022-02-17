@@ -6,6 +6,10 @@ public class Questao2 {
 
     /**
      * Method to check if password is strong according to defined criteria
+     *
+     * @param input A string input from user
+     *
+     * @return A string with the password result length error otherwise empty
      */
     public static String checkPassword(String input) {
 

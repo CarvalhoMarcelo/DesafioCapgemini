@@ -40,7 +40,7 @@ public class DesafioCapgemini {
                     Questao2.checkPassword(getInputQuestao2());
                     break;
                 case 3 :
-                    Questao3.getAnagrams();
+                    Questao3.getAnagrams(getInputQuestao3());
                     break;
                 default :
                     break;
@@ -62,7 +62,7 @@ public class DesafioCapgemini {
     }
 
     /**
-     * Method to request the input for the Questao 1
+     * Method to request the input for the Questao 2
      *
      * @return a String with the user input
      */
@@ -81,6 +81,18 @@ public class DesafioCapgemini {
         return input;
     }
 
+    /**
+     * Method to request the input for the Questao 3
+     *
+     * @return a String with the user input
+     */
+    public static String getInputQuestao3(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Por favor digite uma palavra para verificar se possue anagramas:");
+        final String input = scanner.next();
+        scanner.close();
+        return input;
+    }
 
 
 }
