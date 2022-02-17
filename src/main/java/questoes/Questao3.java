@@ -80,6 +80,7 @@ public class Questao3 {
                     if(result.contains(strArray.get(indexCount))){
                         if(!resultList.contains(strArray.get(indexCount))){
                             resultList.add(strArray.get(indexCount));
+                            strArray.remove(strArray.get(indexCount));
                             anagramsNumber++;
                         }
                     }

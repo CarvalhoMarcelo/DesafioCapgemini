@@ -11,7 +11,7 @@ public class Questao3Test {
         // [0,3]    [8,9]    [0,1,2]->[1,2,3]    [1, 2, 3]
         // [i,i]    [q,q]    [ifa]->[fai]        [fai]->[ifa]
         String input = "ifailuhkqq";
-        assertEquals("4", Questao3.getAnagrams(input));
+        assertEquals("3", Questao3.getAnagrams(input));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class Questao3Test {
         // [0,2]     [0,1]->[1,2]     [1,2]->[0,1]
         // [o,o]     [ov,vo]          [vo,ov]
         String input = "ovo";
-        assertEquals("3", Questao3.getAnagrams(input));
+        assertEquals("2", Questao3.getAnagrams(input));
 
     }
 
