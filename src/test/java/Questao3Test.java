@@ -7,18 +7,18 @@ public class Questao3Test {
 
     @Test
     void givenAString_whenHaveAnagrams_thanAssertEqualsSuccess1() {
-        // Esperado 4 anagramas
-        // [0,3]    [8,9]    [0,1,2]->[1,2,3]    [1, 2, 3]
-        // [i,i]    [q,q]    [ifa]->[fai]        [fai]->[ifa]
+        // Esperado 3 anagramas
+        // [0,3]    [8,9]    [0,1,2]->[1,2,3]
+        // [i,i]    [q,q]    [ifa]->[fai]
         String input = "ifailuhkqq";
         assertEquals("3", Questao3.getAnagrams(input));
     }
 
     @Test
     void givenAString_whenHaveAnagrams_thanAssertEqualsSuccess2() {
-        // Esperado 3 anagramas
-        // [0,2]     [0,1]->[1,2]     [1,2]->[0,1]
-        // [o,o]     [ov,vo]          [vo,ov]
+        // Esperado 2 anagramas
+        // [0,2]     [0,1]->[1,2]
+        // [o,o]     [ov,vo]
         String input = "ovo";
         assertEquals("2", Questao3.getAnagrams(input));
 
