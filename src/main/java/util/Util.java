@@ -87,13 +87,13 @@ public class Util {
      *
      * @return String list with the possible permutes of the list elements
      */
-    public static List<String> StrPermute(String[] elem, String act, int permuteNumber, int arrayLength, List<String> result) {
+    public static List<String> strPermute(String[] elem, String act, int permuteNumber, int arrayLength, List<String> result) {
         if (permuteNumber == 0) {
             result.add(act.replace(",","").replace(" ",""));
         } else {
             for (int i = 0; i < arrayLength; i++) {
                 if (!act.contains(elem[i])) { // Control to avoid repetition
-                    StrPermute(elem, act + elem[i] + ", ", permuteNumber - 1, arrayLength, result);
+                    strPermute(elem, act + elem[i] + ", ", permuteNumber - 1, arrayLength, result);
                 }
             }
         }

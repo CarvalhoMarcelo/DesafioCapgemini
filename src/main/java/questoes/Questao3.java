@@ -74,7 +74,7 @@ public class Questao3 {
                     List<String> result = new ArrayList<String>();
                     for (String s : compareStrArray) {
                         String[] tempStrArray = s.split("");
-                        Util.StrPermute(tempStrArray, "",compareStrArray.get(0).length(),compareStrArray.get(0).length(), result);
+                        Util.strPermute(tempStrArray, "",compareStrArray.get(0).length(),compareStrArray.get(0).length(), result);
                     }
 
                     if(result.contains(strArray.get(indexCount))){
